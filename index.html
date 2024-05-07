@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./style.css?ver=1.124">
+
+    <title>botSvetoforRF</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div><a href="./" class="header__logo"></a></div>
+            <ul class="header__nav-list">
+                <li><a href="#howWork">Как это работает</a></li>
+                <li><a href="#displayedData">Результаты</a></li>
+                <li><a href="#tariff">Тарифы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#faq">Вопрос-ответ</a></li>
+            </ul>
+            <button class="burger"></button>
+            <div class="with_btn"><a href="tg://resolve?domain=Sveto4rus_bot" class="primary-button"><span></span><img src="./images/ic-telegram.svg" alt="telegram"></a></div>
+        </div>
+    </header>
+    <section class="main-banner__section">
+        <div class="main-banner__container">
+            <div class="main-banner__left-part">
+                <h1 class="main-banner__heading">Проверка контрагента <br>по&nbsp;ЗСК через Telegram</h1>
+                <div class="main-banner__content">
+                    <p>Проверим компанию, физлицо и&nbsp;ИП по&nbsp;ИНН на&nbsp;платформе&nbsp;«Знай своего клиента».</p>
+                    <p>Предоставим информацию о&nbsp;более 15&nbsp;миллионах российских и зарубежных организаций.</p>
+                    <p>Сформируем экспресс-отчет с оценкой рисков сотрудничества и аналитику, исходя из задач вашего бизнеса.</p></div>
+                <div class="main-banner__button-wrapper">
+                    <a href="tg://resolve?domain=Sveto4rus_bot" class="primary-button"><span>Начать проверку</span><img src="./images/ic-telegram.svg" alt="telegram"></a>
+                    <a href="tg://resolve?domain=Sveto4rus_support_bot" class="primary-button secondary"><span>Техподдержка</span><img src="./images/teh.svg" alt="telegram"></a> 
+                </div>
+            </div>
+            <div class="main-banner__right-part">
+                <img src="./images/main-img.svg" alt="main-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="how-work__section" id="howWork">
+        <div class="container">
+            <h2>Как это работает</h2>
+            <div class="how-work__wrapper">
+                <div class="how-work__content">
+                    <!-- <img src="./images/how-work-img-1.svg" alt=""> -->
+                    <span>Для проверки любого контрагента вам понадобится только его ИНН</span>
+                    <p>Введите ИНН в бот и он мгновенно выдаст информацию об уровне риска и общедоступные показатели (юридический адрес, список учредителей, оквэды, уплаченные налоги)</p>
+                    <p>При подключенной функции «Контур фокус» вы  можете получить максимально полную информацию о контрагенте, связи, финансовые показатели, участие в судебных делах, товарные знаки и т.д.</p>
+                </div>
+                <div class="how-work__img">
+                    <img src="./images/svetofor.webp" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="displayed-data__section" id="displayedData">
+        <div class="container">
+            <h2>Уровни риска</h2>
+            <div class="tabs">
+                <ul class="tabs__caption">
+                    <li class="active tabs__green">Зеленый</li>
+                    <li class="tabs__yellow">Желтый <span>без типологии</span></li>
+                    <li class="tabs__yellow">Желтый <span>с типологией</span></li>
+                    <li class="tabs__red">Красный</li>
+                </ul>
+                
+                <div class="tabs__content active">
+                    <img src="./images/show-data-green.png" alt="" loading="lazy">
+                    <p><strong>Зеленый уровень</strong> – при таком уровне риски от ЦБ по выбранному ИНН отсутствуют, контрагенты могут без опасений совершать банковские операции, не боясь блокировки счета</p>
+                </div>
+                <div class="tabs__content">
+                    <img src="./images/show-data-yellow-1.png" alt="" loading="lazy">
+                    <p><strong>Желтый уровень без типологии</strong> – просто средний уровень риска, без конкретики к какой-либо сомнительной операции. При таком условии риски работы с контрагентом незначительные, в целом, многие организации могут быть отнесены к среднему риску без типологии и затем выйти из него автоматически, став «Зелеными».</p>
+                </div>
+                <div class="tabs__content">
+                    <img src="./images/show-data-yellow-tip.png" alt="" loading="lazy">
+                    <p><strong>Желтый уровень с типологией</strong> – такая отметка присваивается Центральным Банком при установлении связи контрагента с другими сомнительными контрагентами в цепочке взаиморасчетов. Список кодов типологии достаточно обширен, с ним можно ознакомиться <a href="./Svetofor-codes.pdf" target="_blank" rel="noopener">здесь</a>. При работе с контрагентами желтого уровня с присвоенной типологией присутствует риск приостановки операции, запросу документов со стороны банка для подтверждения сделок.</p>
+                </div>
+                <div class="tabs__content">
+                    <img src="./images/show-data-red.png" alt="" loading="lazy">
+                    <p><strong>Красный уровень</strong> – это самый высокий уровень риска, присвоенный от ЦБ, он означает, что контрагент проводил сомнительные операции с разными кодами типологии, платежи на таких контрагентов могут привести к отнесению вас тоже к высокому уровню риска, к полной блокировке счета и дальнейшей остановке бизнес-процессов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="check__section" id="check">
+        <div class="container">
+            <h2>Зачем нужно <br>проверять контрагентов</h2>
+            <div class="check__wrapper">
+                <p class="check__subtitle">Проведение платежа на сомнительного контрагента может обернуться для бизнеса следующими негативными последствиями:</p>
+                <ul>
+                    <li>Запрос большого количества документов от Банка</li>
+                    <li>Приостановка операций по счетам</li>
+                    <li>Отказ в банковском обслуживании</li>
+                    <li>Полная остановка деятельности ввиду отнесения контрагента к высокому уровню риска</li>
+                </ul>
+                <div class="check__bottom">
+                    <span>Всего за 1000 рублей</span>
+                    <p>каждый предприниматель может избавить себя от предстоящих затрат по времени, юридическому обслуживанию, судебным тяжбам с банками, потерей ликвидности</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- <section class="tariff__section" id="tariff">
+            <div class="container">
+                <h2>Тарифы и опции</h2>
+                <ul class="tariff__list">
+                    <li>
+                        <h3>Стандартная <br/>подписка <br/><br/> 1&nbsp;000&nbsp;₽ в&nbsp;месяц </h3>
+                        <div>Доступ в бот на 1 месяц для проверки по ЗСК и черным спискам ЦБ 550П</div>
+                        <p>Получение общедоступных сведений о компании (ИНН, КПП, юридический адрес, директор, учредитель, уставный капитал, уплаченные налоги)</p>
+                    </li>
+                    <li>
+                        <h3>Дополнительная расширенная выгрузка <br/><br/>+ 500&nbsp;₽ в&nbsp;месяц</h3>
+                        <div>25 запросов по ИНН или 3 месяца (что раньше закончится)</div>
+                        <p>Дополнительно: полная выгрузка данных по все возможным источникам информации (связи, банкротство, анализ финансовой отчетности, суды, проверки)</p>
+                    </li>
+                    <li>
+                        <h3>Дополнительная расширенная выгрузка <br/><br/>+ 700&nbsp;₽ в&nbsp;месяц</h3>
+                        <div>40 запросов по ИНН или 2 месяца (что раньше закончится)</div>
+                        <p>Дополнительно: полная выгрузка данных по все возможным источникам информации (связи, банкротство, анализ финансовой отчетности, суды, проверки)</p>
+                    </li>
+                    <li>
+                        <h3>Дополнительная расширенная выгрузка <br/><br/>+ 1&nbsp;000&nbsp;₽ в&nbsp;месяц </h3>
+                        <div>100 запросов по ИНН или 2 месяца (что раньше закончится)</div>
+                        <p>Дополнительно: полная выгрузка данных по все возможным источникам информации (связи, банкротство, анализ финансовой отчетности, суды, проверки)</p>
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+    <section class="tariff__section" id="tariff">
+        <div class="container">
+            <h2>Тарифы и опции</h2>
+            <div class="tariff__list_new">
+                <div class="standart">
+                    <h3>Стандартная подписка <span>1&nbsp;000&nbsp;₽ в&nbsp;месяц</span></h3>
+                    <p>Доступ в бот на 1 месяц для проверки по ЗСК и черным спискам ЦБ 550П</p>
+                    <p>Получение общедоступных сведений о компании (ИНН, КПП, юридический адрес, директор, учредитель, уставный капитал, уплаченные налоги)</p>
+                </div>
+                <div class="options">
+                    <h3>Дополнительные опции</h3>
+                    <p>Дополнительная расширенная выгрузка о контрагентах: полные данные по всем возможным источникам информации (связи, банкротство, анализ финансовой отчетности, суды, проверки).</p>
+                    <ul>
+                        <li><span>+ 500&nbsp;₽ </span><span>25 запросов по ИНН <br/><span>или</span> 3 месяца <span>(что раньше закончится)</span></span></li>
+                        <li><span>+ 700&nbsp;₽ </span><span>40 запросов по ИНН <br/><span>или</span> 2 месяца <span>(что раньше закончится)</span></span></li>
+                        <li><span>+ 1&nbsp;000&nbsp;₽ </span><span>100 запросов по ИНН <br/><span>или</span> 2 месяца <span>(что раньше закончится)</span></span></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+    <section class="use__section">
+        <div class="container">
+            <div class="use__wrapper">
+                <div class="use__content">
+                    <h2>Воспользуйтесь<br> нашим ботом</h2>
+                    <p>Проверьте контрагентов за&nbsp;секунды <br/>с&nbsp;помощью нашего бота в&nbsp;Telegram</p>
+                    <a href="tg://resolve?domain=Sveto4rus_bot" class="primary-button">
+                        <span>Начните проверку сейчас</span>
+                        <img src="./images/ic-telegram.svg" alt="telegram">
+                    </a href="">
+                </div>
+                <div class="use__img">
+                    <img src="./images/use-img.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="data__section" id="data">
+        <div class="container">
+            <div class="data__wrapper">
+                <div class="data__content">
+                    <h2>Откуда бот <br/>получает данные</h2>
+                    <p>Наш уникальный бот получает информацию напрямую из&nbsp;государственных органов и&nbsp;c&nbsp;платформы ЗСК от&nbsp;Центрального банка&nbsp;РФ.</p>
+                    <p>Все базы актуальные и&nbsp;обновляются каждое&nbsp;утро.</p>
+                </div>
+                <div class="data__img">
+                    <img src="./images/data-img.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- <section class="partners__section" id="partners">
+            <div class="container">
+                <h2>Кто уже проверяет с нами </h2>
+                <ul class="partners__list">
+                    <li><img src="./images/partner-1.svg" alt=""></li>
+                    <li><img src="./images/partner-2.svg" alt=""></li>
+                    <li><img src="./images/partner-3.svg" alt=""></li>
+                    <li><img src="./images/partner-4.svg" alt=""></li>
+                </ul>
+            </div>
+        </section> -->
+    <section class="reviews__section" id="reviews">
+        <div class="container">
+            <h2>Отзывы</h2>
+            <ul class="reviews__list">
+                <li>
+                    <div>
+                        <img src="./images/review-1.png" alt="">
+                        <span>Илья Морозов</span>
+                    </div>
+                    <p>Использование бота значительно упростило процесс проверки наших контрагентов. Теперь мы можем быстро получать всю необходимую информацию по ИНН, что помогает нам избегать рисков в финансовой деятельности. Особенно ценно то, что данные всегда актуальны, уже пару раз выручило от переводов сомнительным компаниям.</p>
+                    <button></button>
+                </li>
+                <li>
+                    <div>
+                        <img src="./images/review-3.png" alt="">
+                        <span>Андрей Кузнецов</span>
+                    </div>
+                    <p>Бот просто незаменим для оперативной проверки контрагентов. Удобство использования Telegram для таких запросов экономит нам массу времени.</p>
+                    <button></button>
+                </li>
+                <li>
+                    <div>
+                        <img src="./images/review-2.png" alt="">
+                        <span>Марина Елисеева</span>
+                    </div>
+                    <p>С ботом мы стали увереннее в выборе деловых партнеров. Мы его используем, чтобы получить полную картину финансового состояния контрагентов, что крайне важно для нашей стратегии минимизации рисков. Рекомендую этот инструмент всем, кто ценит надежность и безопасность в бизнесе.</p>
+                    <button></button>
+                </li>
+                <li>
+                    <div>
+                        <img src="./images/review-4.png" alt="">
+                        <span>Виктор Толмачев</span>
+                    </div>
+                    <p>Благодаря этому боту наша компания сократила время на проверку контрагентов в несколько раз. Теперь мы моментально получаем самую важную информацию о потенциальных партнерах. Спасибо за отличный сервис!</p>
+                    <button></button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="faq__section" id="faq">
+        <div class="container">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="accordion">
+                <div class="accordion__item">
+                    <div class="accordion__title">
+                        <div class="accordion__arrow"><span class="accordion__arrow-item "></span></div> 
+                        <span class="accordion__title-text">Зачем нужно проверять контрагентов?</span>
+                    </div>
+                    <div class="accordion__content"><p>Вы узнаете, работает ли компания по заявленному адресу, также узнаете больше о ее ресурсах.<p>
+                        <p>Сможете получить данные бухгалтерской финансовой отчетности и узнать про судебные тяжбы контрагентов.</p>
+                        <p>Мы покажем вам риски контрагента по мнению ЦБ по платформе ЗСК (Знай своего клиента).</p>
+                        <p>На основании большого количества данных, полученных через наш бот, вы сможете принять верное решение о сотрудничестве с контрагентом и минимизации рисков.</p></div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__title">
+                        <div class="accordion__arrow"><span class="accordion__arrow-item "></span></div> 
+                        <span class="accordion__title-text">Как начать работу с ботом?</span>
+                    </div>
+                    <div class="accordion__content"><p>Для работы вам нужен только действующий аккаунт в Telegram.</p><p>Перейдите в <a href="tg://resolve?domain=Sveto4rus_bot">бот</a>, нажмите клавишу старт, оплатите подписку и проверяйте интересующих вас контрагентов.</p></div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__title">
+                        <div class="accordion__arrow"><span class="accordion__arrow-item "></span></div> 
+                        <span class="accordion__title-text">Насколько данные актуальны?</span>
+                    </div>
+                    <div class="accordion__content">Наш бот постоянно поддерживает актуальность данных и обновляет свою базу <strong>ежедневно</strong>.</div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__title">
+                        <div class="accordion__arrow"><span class="accordion__arrow-item "></span></div> 
+                        <span class="accordion__title-text">Откуда вы берете информацию по ЗСК?</span>
+                    </div>
+                    <div class="accordion__content">Вся информация в боте только из официальных источников государственных органов.</div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__title">
+                        <div class="accordion__arrow"><span class="accordion__arrow-item "></span></div> 
+                        <span class="accordion__title-text">Сколько стоит бот и что включено?</span>
+                    </div>
+                    <div class="accordion__content">
+                        <p>1&nbsp;000&nbsp;₽&nbsp;&ndash; доступ в бот на месяц для проверки контрагентов по системе Знай своего клиента.</p>
+                        От 500&nbsp;₽ до 1&nbsp;000&nbsp;₽ в&nbsp;месяц&nbsp;&ndash; дополнительная подписка на расширенную выгрузку по контрагентам: покажет финансовое состояние, деловые связи, товарные знаки, суды, банкротства и т.д.</div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__title">
+                        <div class="accordion__arrow"><span class="accordion__arrow-item "></span></div> 
+                        <span class="accordion__title-text">У меня что-то не работает или не получается оплатить доступ</span>
+                    </div>
+                    <div class="accordion__content">Напишите, пожалуйста, в техническую поддержку бота в Telegram — <a href="tg://resolve?domain=Sveto4rus_support_bot">@Sveto4rus_support_bot</a>.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="use__section use__section--2">
+        <div class="container">
+            <div class="use__wrapper">
+                <div class="use__content">
+                    <h2>Проверить контрагента<br> по ЗСК через бот</h2>
+                    <p>Моментальный доступ к&nbsp;данным <br>о&nbsp;контрагентах из&nbsp;официальных источников</p>
+                    <a href="tg://resolve?domain=Sveto4rus_bot" class="primary-button">
+                        <span>Открыть бот</span>
+                        <img src="./images/ic-telegram.svg" alt="telegram">
+                    </a href="">
+                </div>
+                <div class="use__img">
+                    <img src="./images/use-img.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <a href="/" class="footer__logo"></a>
+            <ul class="footer__nav-list">
+                <li>
+                    <a href="#howWork">Как это работает</a>
+                </li>
+                <li>
+                    <a href="#displayedData">Результаты</a>
+                </li>
+                <li>
+                    <a href="#tariff">Тарифы</a>
+                </li>
+                <li>
+                    <a href="#reviews">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#faq">Вопрос-ответ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./scripts.js?ver=1.1"></script>
+</body>
+</html>
